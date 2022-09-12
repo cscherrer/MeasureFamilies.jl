@@ -3,6 +3,13 @@ uuid = "a50ec766-ce0e-4c26-b006-50409d6f23fe"
 authors = ["Chad Scherrer <chad.scherrer@gmail.com> and contributors"]
 version = "0.1.0"
 
+[deps]
+ConcreteStructs = "2569d6c7-a4a2-43d3-a901-331e8e4be471"
+LazyArrays = "5078a376-72f3-5289-bfd5-ec5146d43c02"
+MeasureBase = "fa1605e6-acd5-459c-a1e6-7e635759db14"
+MeasureTheory = "eadaa1a4-d27c-401d-8699-e962e1bbc33b"
+Static = "aedffcd0-7271-4cad-89d0-dc628f76c6d3"
+
 [compat]
 julia = "1"
 

@@ -125,7 +125,7 @@ end
     end
 end
 
-basemeasure(d::TweedieMeasure) = d.base
+basemeasure(d::TweedieMeasure) = d.fam.base
 
 function logdensity_def(d::TweedieMeasure, x)
     mydot(x, d.θ) - d.cumulant
