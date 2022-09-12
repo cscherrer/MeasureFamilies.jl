@@ -1,5 +1,6 @@
 module MeasureFamilies
 
-# Write your package code here.
+include("exponential-families.jl")
+include("tweedie.jl")
 
 end
