@@ -29,10 +29,10 @@ struct Tweedie{S,B,D,P} <: AbstractEDM
     p::P
 end
 
-struct TweedieMeasure{B,Θ,P,S,C} <: AbstractMeasure
-    fam::Tweedie{B,Θ,P}
+struct TweedieMeasure{S,B,D,P,Θ,Σ,C} <: AbstractMeasure
+    fam::Tweedie{S,B,D,P}
     θ::Θ
-    σ::S
+    σ::Σ
     cumulant::C
 end
 
@@ -45,7 +45,7 @@ var(d::TweedieMeasure) = d.σ^2 * mean(d)^d.fam.p
 
 @inline function tweedie_cumulant(p::P, θ) where {P}
     if p == zero(P)
-        return 0.5 * θ^2
+        return θ^2 / 2
     elseif p == one(P)
         return exp(θ)
     elseif p == 2
